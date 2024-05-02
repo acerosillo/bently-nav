@@ -325,7 +325,7 @@ header.main__navigation {
 }
 
 .sub__menu__main.is__active .sub__menu__level_one {
-  height: calc(82vh - 70px);
+  height: calc(82vh - 40px);
 }
 
 .sub__menu__level_one {
@@ -383,7 +383,7 @@ li.has_sub_menu_level_three {
     margin-left: 0;
     right: 50%;
     margin-right: -50vw;
-    height: calc(75vh - 37px);
+    height: calc(82vh - 10px);
     z-index: -1;
     top: 0;
     opacity: 0;
