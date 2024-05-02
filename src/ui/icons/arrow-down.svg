@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Navigation" transform="translate(-1258.000000, -37.000000)" fill="currentColor">
+            <g id="navigation">
+                <g id="language" transform="translate(1231.000000, 29.000000)">
+                    <g id="Group-2" transform="translate(27.181981, 8.681981)">
+                        <rect id="Rectangle" transform="translate(4.000000, 3.500000) rotate(-45.000000) translate(-4.000000, -3.500000) " x="3" y="0" width="2" height="7" rx="1"></rect>
+                        <rect id="Rectangle" transform="translate(8.000000, 3.500000) scale(-1, 1) rotate(-45.000000) translate(-8.000000, -3.500000) " x="7" y="0" width="2" height="7" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

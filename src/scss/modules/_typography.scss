@@ -29,3 +29,12 @@ h6 {
 ul {
   list-style: none;
 }
+
+@font-face {
+  font-family: "Bentley-font";
+  src: url("../ui/fonts/Bentley/Media-Gothic.woff") format("woff"),
+    url("../ui/fonts/Bentley/Media-Gothic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
