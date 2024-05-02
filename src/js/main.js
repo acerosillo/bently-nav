@@ -9,7 +9,37 @@ function preCheck() {
 function init() {
   navigationDesktop.init();
   navigationMobile.init();
+  navigationHover.init();
 }
+
+var navigationHover = {
+  init: function () {
+    // Get the image element
+    const carImage = document.getElementById("carImage");
+
+    // Get all links in the sub menu
+    const links = document.querySelectorAll(".sub__menu__level_one a");
+
+    // Loop through each link
+    links.forEach((link) => {
+      // Add event listener for hover
+      link.addEventListener("mouseenter", function () {
+        // Check if the link has a data-img attribute
+        const imgData = this.getAttribute("data-img");
+        if (imgData) {
+          // Change the image src attribute
+          carImage.src = `./${imgData}.jpg`;
+        }
+      });
+
+      // Add event listener for mouseout (optional - if you want to change the image back)
+      link.addEventListener("mouseleave", function () {
+        // Change the image src attribute back to the default
+        carImage.src = "./models-0.991c85cf.jpg";
+      });
+    });
+  },
+};
 
 var navigationMobile = {
   init: function () {
