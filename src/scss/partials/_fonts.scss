@@ -1,0 +1,60 @@
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-xbold: 800;
+
+// for Headings h1 h2 etc
+@mixin xBoldFontforHeadings() {
+  font-weight: $font-weight-xbold;
+  font-family: "Helvetica Now Display W01 XBold", sans-serif;
+}
+@mixin boldFontforHeadings() {
+  font-weight: $font-weight-bold;
+  font-family: "Helvetica Now Display W01 Bold", sans-serif;
+}
+@mixin boldFontforHeadingsh3h4h5() {
+  font-weight: $font-weight-bold;
+  font-family: "Helvetica Now Text W05 Bold", sans-serif;
+}
+@mixin regularFont() {
+  font-weight: $font-weight-regular !important;
+  font-family: "Helvetica Now Text W05 Regular", sans-serif !important;
+}
+
+@mixin lightFont() {
+  font-weight: $font-weight-light;
+  font-family: "Helvetica Now Text W01 Light", sans-serif;
+}
+
+@mixin microLightFont() {
+  font-weight: $font-weight-light;
+  font-family: "Helvetica Now Micro W01 Light", sans-serif;
+}
+
+.x-bold {
+  @include xBoldFontforHeadings();
+}
+
+.regular-weight {
+  font-weight: $font-weight-regular;
+  font-family: "Helvetica Now Text W05 Regular", sans-serif;
+}
+.light-weight {
+  font-weight: $font-weight-light;
+  font-family: "Helvetica Now Text W05 Light", sans-serif;
+}
+.bold-weight {
+  font-weight: $font-weight-bold;
+  font-family: "Helvetica Now Text W05 Bold", sans-serif;
+}
+.xbold-weight {
+  font-weight: $font-weight-semibold;
+  font-family: "Helvetica Now Display W01 XBold", sans-serif;
+}
+.standard-into-text {
+  font-family: "Helvetica Now Text W05 Regular", sans-serif;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}

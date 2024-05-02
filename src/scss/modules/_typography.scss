@@ -1,0 +1,32 @@
+@import "./_mixins.scss";
+@import "../partials/_fonts.scss";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include boldFontforHeadings();
+  letter-spacing: -1px;
+  color: $primary-blue;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  &.center {
+    text-align: center;
+  }
+  &.no-margin {
+    margin: 0;
+  }
+
+  &.white {
+    color: $primary-white;
+  }
+  @include mq("tablet-wide") {
+    margin-top: 1.5rem;
+    letter-spacing: -1px;
+  }
+}
+
+ul {
+  list-style: none;
+}

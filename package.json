@@ -1,0 +1,23 @@
+{
+  "name": "bently nav",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html --no-babel",
+    "lint": "eslint . --fix",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --no-content-hash --dist-dir ./dist"
+  },
+  "keywords": [],
+  "author": "Ace Rosillo",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "eslint": "^8.51.0",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "swiper": "^11.0.3"
+  }
+}
