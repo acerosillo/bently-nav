@@ -12,10 +12,31 @@ function init() {
   navigationHover.init();
 }
 
+// Function to handle window resize
+function handleResize() {
+  // Get the element you want to remove the class from
+  const mainElm = document.querySelector(".mainmenu");
+  const subElm = document.querySelector(".sub__menu__main");
+
+  // Check window width
+  if (window.innerWidth < 1024) {
+    // Remove the class from the element
+    mainElm.classList.remove("is__active");
+    subElm.classList.remove("is__active");
+  }
+}
+
+// Add event listener for window resize
+window.addEventListener("resize", handleResize);
+
+// Call the function initially to handle the case where the window is already resized below 1024px
+handleResize();
+
 var navigationHover = {
   init: function () {
     // Get the image element
     const carImage = document.getElementById("carImage");
+    const carImageMain = document.getElementById("carImageMain");
 
     // Get all links in the sub menu
     const links = document.querySelectorAll(".sub__menu__level_one a");
@@ -29,6 +50,7 @@ var navigationHover = {
         if (imgData) {
           // Change the image src attribute
           carImage.src = `./${imgData}.jpg`;
+          carImageMain.src = `./${imgData}.jpg`;
         }
       });
 
@@ -36,6 +58,7 @@ var navigationHover = {
       link.addEventListener("mouseleave", function () {
         // Change the image src attribute back to the default
         carImage.src = "./models-0.991c85cf.jpg";
+        carImageMain.src = "./models-0.991c85cf.jpg";
       });
     });
   },
@@ -134,6 +157,7 @@ var navigationDesktop = {
       ".main__menu__item__holder__nested"
     );
     const mainMenuNav = document.querySelector(".mainmenu");
+    const mainMenuNavLogo = document.querySelector(".bentley-logo");
     const closeMenu = document.querySelectorAll(".close__nav");
     const closeMenuBottom = document.querySelectorAll(".close__nav__bottom");
     const openLeveltwo = document.querySelectorAll(".has_sub_menu_level_two");
@@ -147,6 +171,7 @@ var navigationDesktop = {
           if (element === elem && !element.classList.contains("is__active")) {
             element.classList.add("is__active");
             mainMenuNav.classList.add("is__active");
+            mainMenuNavLogo.classList.add("is__active");
 
             element.parentElement
               .querySelector(".close__nav")
@@ -172,6 +197,7 @@ var navigationDesktop = {
           } else {
             element.classList.remove("is__active");
             mainMenuNav.classList.remove("is__active");
+            mainMenuNavLogo.classList.remove("is__active");
           }
         }
 
@@ -182,6 +208,7 @@ var navigationDesktop = {
           ) {
             megaMenu.classList.add("is__active");
             mainMenuNav.classList.add("is__active");
+            mainMenuNavLogo.classList.add("is__active");
           } else {
             megaMenu.classList.remove("is__active");
           }
@@ -244,6 +271,7 @@ var navigationDesktop = {
         closeButton.classList.toggle("is__active");
         if (closeButton.className.includes("is__active")) {
           mainMenuNav.classList.remove("is__active");
+          mainMenuNavLogo.classList.remove("is__active");
           //menu__nav__cards.style.visibility = "visible";
           if (menu__nav__cards != null) {
             menu__nav__cards.classList.remove("not__active");
@@ -265,7 +293,7 @@ var navigationDesktop = {
         closeButton.classList.toggle("is__active");
         if (closeButton.className.includes("is__active")) {
           mainMenuNav.classList.remove("is__active");
-
+          mainMenuNavLogo.classList.remove("is__active");
           closeButton
             .closest(".sub__menu__main")
             .classList.remove("is__active");

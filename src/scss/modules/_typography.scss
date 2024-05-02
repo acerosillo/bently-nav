@@ -8,7 +8,6 @@ h5,
 h6 {
   @include boldFontforHeadings();
   letter-spacing: -1px;
-  color: $primary-blue;
   margin-top: 0;
   margin-bottom: 2rem;
   &.center {

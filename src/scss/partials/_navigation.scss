@@ -51,6 +51,11 @@ header.main__navigation {
       max-width: 75px;
     }
   }
+  &.is__active {
+    img {
+      max-width: 70px;
+    }
+  }
 }
 @include mq("tablet-wide") {
   .mainmenu.is__active {
@@ -171,7 +176,7 @@ header.main__navigation {
       transform: scaleX(0);
       transform-origin: top left;
       transition: transform 0.5s ease;
-      height: 2px;
+      height: 1px;
       margin-top: 4px;
       background: #394d45;
     }
@@ -378,7 +383,7 @@ li.has_sub_menu_level_three {
     margin-left: 0;
     right: 50%;
     margin-right: -50vw;
-    height: calc(75vh - 47px);
+    height: calc(75vh - 37px);
     z-index: -1;
     top: 0;
     opacity: 0;
@@ -507,6 +512,7 @@ li.holder_page a {
 .sub__menu__level_one a,
 .sub__menu__level_two a,
 .sub__menu__level_three a {
+  opacity: 0.5;
   @include transition(0.2s ease);
   font-size: 1.6rem;
   line-height: 2.2rem;
@@ -521,7 +527,7 @@ li.holder_page a {
   }
 
   &:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
@@ -570,7 +576,7 @@ li.holder_page a {
   height: 100%;
   width: 100%;
   flex-wrap: wrap;
-  padding-top: 6rem;
+  padding-top: 1rem;
   padding-left: 6rem;
   @media (max-width: 1200px) {
     padding-left: 0rem;
@@ -585,7 +591,7 @@ li.holder_page a {
   position: absolute;
   right: 0;
   transition: opacity 0.3s ease-in-out;
-  top: 6rem;
+  top: 1rem;
   width: 70%;
   opacity: 0;
   z-index: -1;
