@@ -122,6 +122,15 @@ header.main__navigation {
       font-size: 13px;
       color: #394d45;
       padding-right: 2rem;
+      &.menu-desktop {
+        position: absolute;
+        right: 0;
+        &:hover {
+          &::after {
+            transform: scaleX(0);
+          }
+        }
+      }
     }
   }
 
@@ -137,7 +146,7 @@ header.main__navigation {
     cursor: pointer;
     font-size: 1.8rem;
     line-height: 1.8rem;
-    color: $primary-blue;
+    color: $bentley-black;
     @media (max-width: 1430px) {
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -296,15 +305,15 @@ header.main__navigation {
 
 .close__nav {
   position: absolute;
-  right: 0;
-  top: -50px;
+  top: -40px;
+  right: 10px;
   z-index: 1;
   cursor: pointer;
 
   background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.46967 2.46967C2.76256 2.17678 3.23744 2.17678 3.53033 2.46967L8 6.93934L12.4697 2.46967C12.7626 2.17678 13.2374 2.17678 13.5303 2.46967C13.8232 2.76256 13.8232 3.23744 13.5303 3.53033L9.06066 8L13.5303 12.4697C13.8232 12.7626 13.8232 13.2374 13.5303 13.5303C13.2374 13.8232 12.7626 13.8232 12.4697 13.5303L8 9.06066L3.53033 13.5303C3.23744 13.8232 2.76256 13.8232 2.46967 13.5303C2.17678 13.2374 2.17678 12.7626 2.46967 12.4697L6.93934 8L2.46967 3.53033C2.17678 3.23744 2.17678 2.76256 2.46967 2.46967Z" fill="black"/></svg>')
     no-repeat 50% 50%;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   p {
     text-indent: -9999px;
   }
@@ -334,6 +343,11 @@ li.has_sub_menu_level_two,
 li.has_sub_menu_level_three {
   display: flex;
   width: 100%;
+
+  padding-left: 40px !important;
+  background: url('data:image/svg+xml,<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.75732" y="0.257355" width="6" height="6" transform="rotate(45 4.75732 0.257355)" fill="%23394D45"/></svg>')
+    no-repeat 20px 50%;
+  background-size: 8px;
 }
 
 .sub__menu__level_two {
@@ -493,9 +507,10 @@ li.holder_page a {
 .sub__menu__level_one a,
 .sub__menu__level_two a,
 .sub__menu__level_three a {
+  @include transition(0.2s ease);
   font-size: 1.6rem;
   line-height: 2.2rem;
-  color: $primary-blue;
+  color: $bentley-black;
   @include regularFont();
   position: relative;
   text-decoration: none;
@@ -504,14 +519,19 @@ li.holder_page a {
     font-size: 1.4rem;
     line-height: 2rem;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .sub__menu__level_one button,
 .sub__menu__level_two button,
 .sub__menu__level_three button {
+  @include transition(0.2s ease);
   font-size: 1.6rem;
   line-height: 2.2rem;
-  color: $primary-blue;
+  color: $bentley-black;
   @include regularFont();
   position: relative;
   text-decoration: none;
@@ -519,6 +539,9 @@ li.holder_page a {
   @media (max-width: 1200px) {
     font-size: 1.4rem;
     line-height: 2rem;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -541,6 +564,7 @@ li.holder_page a {
   top: 50%;
   transform: translateY(-50%);
   @include transition(0.2s ease);
+  display: none;
 }
 .divv {
   height: 100%;
@@ -651,19 +675,21 @@ li.holder_page a {
     border: 0;
     font-size: 1.4rem;
     line-height: 2rem;
-    color: $primary-blue;
+    color: $bentley-black;
+    text-transform: uppercase;
     @include regularFont();
     padding: 0;
     margin-bottom: 3rem;
     &::before {
       content: "";
       margin-left: 0px;
-      padding: 1rem 0.5rem;
+      padding: 0;
       position: relative;
       display: inline-block;
       top: 0.5rem;
-      transform: rotate(180deg);
-      background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.0026 1.33337L9.66927 5.00004L6.0026 8.66671M9.33594 5.00004H0.335938' stroke='%230F2067' stroke-width='1.5'/%3e%3c/svg%3e ")
+      width: 20px;
+      height: 20px;
+      background: url('data:image/svg+xml,<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.095 12.5C20.3711 12.5 20.595 12.2761 20.595 12C20.595 11.7239 20.3711 11.5 20.095 11.5L20.095 12.5ZM20.095 11.5L9.09497 11.5L9.09497 12.5L20.095 12.5L20.095 11.5Z" fill="%23394D45"/><path d="M9.09497 8L9.09497 16L4.09497 12L9.09497 8Z" stroke="%23394D45" stroke-linejoin="round"/></svg>')
         50% 50% no-repeat;
     }
   }
@@ -709,7 +735,7 @@ li.holder_page a {
   .main__navigation ul li button {
     font-size: 1.6rem;
     line-height: 2.2rem;
-    color: $primary-blue;
+    color: $bentley-black;
     @include regularFont();
     position: relative;
     text-decoration: none;
@@ -773,7 +799,7 @@ li.holder_page a {
     > li:hover {
       > a::after,
       > button::after {
-        transform: scaleX(1);
+        //transform: scaleX(1);
       }
     }
     .holder_page a {
@@ -797,6 +823,9 @@ li.holder_page a {
   }
   li {
     margin-bottom: 1.5rem;
+    a {
+      font-size: 14px !important;
+    }
   }
 }
 
@@ -814,4 +843,13 @@ li.holder_page a {
   background: url('data:image/svg+xml,<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.75732 3.06065L13.8 3.06065C13.9104 3.06065 14 3.1502 14 3.26065L14 7.30329" stroke="%23394D45" stroke-linecap="round"/><path d="M6.59728 3.06065L2 3.06065L2 15.0607L14 15.0607L14 10.1644" stroke="%23394D45" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.98959 8.36395C7.79433 8.55922 7.79433 8.8758 7.98959 9.07106C8.18485 9.26632 8.50144 9.26632 8.6967 9.07106L7.98959 8.36395ZM13.6464 2.7071L7.98959 8.36395L8.6967 9.07106L14.3536 3.41421L13.6464 2.7071Z" fill="%23394D45"/></svg>')
     no-repeat 0 0;
   padding-left: 2rem !important;
+}
+
+.menu-desktop {
+  background: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.75C0 0.335786 0.335786 0 0.75 0H10.75C11.1642 0 11.5 0.335786 11.5 0.75C11.5 1.16421 11.1642 1.5 10.75 1.5H0.75C0.335786 1.5 0 1.16421 0 0.75ZM0 4.75C0 4.33579 0.335786 4 0.75 4H10.75C11.1642 4 11.5 4.33579 11.5 4.75C11.5 5.16421 11.1642 5.5 10.75 5.5H0.75C0.335786 5.5 0 5.16421 0 4.75ZM0 8.75C0 8.33579 0.335786 8 0.75 8H10.75C11.1642 8 11.5 8.33579 11.5 8.75C11.5 9.16421 11.1642 9.5 10.75 9.5H0.75C0.335786 9.5 0 9.16421 0 8.75Z" fill="%23394D45"/></svg>')
+    no-repeat 50% 50%;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  position: relative;
 }
