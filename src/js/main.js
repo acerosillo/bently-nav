@@ -108,7 +108,8 @@ var navigationDesktop = {
     const closeMenuBottom = document.querySelectorAll(".close__nav__bottom");
     const openLeveltwo = document.querySelectorAll(".has_sub_menu_level_two");
     const sub__menu__main = document.querySelectorAll(".sub__menu__main");
-    navCards = false;
+    //navCards = false;
+    var navCards = false;
 
     for (const [elemIndex, elem] of openMenu.entries()) {
       elem.addEventListener("click", function () {
