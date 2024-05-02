@@ -104,7 +104,6 @@ var navigationDesktop = {
       ".main__menu__item__holder__nested"
     );
     const mainMenuNav = document.querySelector(".mainmenu");
-    const menuLeft = document.querySelector(".menu-desktop");
     const closeMenu = document.querySelectorAll(".close__nav");
     const closeMenuBottom = document.querySelectorAll(".close__nav__bottom");
     const openLeveltwo = document.querySelectorAll(".has_sub_menu_level_two");
