@@ -584,11 +584,14 @@ li.holder_page a {
   display: none;
 }
 .divv {
-  height: 100%;
+  //height: 100%;
   width: 100%;
   flex-wrap: wrap;
   padding-top: 1rem;
   padding-left: 6rem;
+  position: relative;
+  max-height: 700px;
+  height: calc(90vh - 90px);
   @media (max-width: 1200px) {
     padding-left: 0rem;
   }
@@ -603,11 +606,11 @@ li.holder_page a {
   right: 0;
   transition: opacity 0.3s ease-in-out;
   top: 1rem;
-  width: 70%;
+  //width: 70%;
   opacity: 0;
   z-index: -1;
   visibility: hidden;
-  max-height: 640px;
+  //max-height: 640px;
   height: 100%;
   @include mq("tablet-wide") {
     display: none;
