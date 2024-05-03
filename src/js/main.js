@@ -223,6 +223,7 @@ var navigationDesktop = {
         .querySelector(".menu__nav__cards");
 
       levelTwo.querySelector("button").addEventListener("click", function () {
+        levelTwo.classList.toggle("on");
         for (const [levelTwoIndexItem, levelTwoItem] of document
           .querySelectorAll(".sub__menu__level_two")
           .entries()) {
@@ -231,6 +232,7 @@ var navigationDesktop = {
             !levelTwoItem.classList.contains("is__active")
           ) {
             levelTwoItem.classList.add("is__active");
+
             //menu__nav__cards.style.visibility = "hidden";
             if (navCards) {
               menu__nav__cards.classList.add("not__active");

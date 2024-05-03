@@ -348,11 +348,18 @@ li.has_sub_menu_level_two,
 li.has_sub_menu_level_three {
   display: flex;
   width: 100%;
-
-  padding-left: 40px !important;
   background: url('data:image/svg+xml,<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.75732" y="0.257355" width="6" height="6" transform="rotate(45 4.75732 0.257355)" fill="%23394D45"/></svg>')
     no-repeat 20px 50%;
-  background-size: 8px;
+  background-size: 0px;
+  &.on,
+  &:hover {
+    display: flex;
+    width: 100%;
+    padding-left: 40px !important;
+    background: url('data:image/svg+xml,<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.75732" y="0.257355" width="6" height="6" transform="rotate(45 4.75732 0.257355)" fill="%23394D45"/></svg>')
+      no-repeat 20px 50%;
+    background-size: 8px;
+  }
 }
 
 .sub__menu__level_two {
