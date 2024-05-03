@@ -120,12 +120,15 @@ var navigationMobile = {
         toggleMenu.classList.add(isVisibleClass);
         listWrapper2.classList.remove(isVisibleClass);
         listWrapper3.classList.remove(isVisibleClass);
+
         const menuLinks = menuWrapper.querySelectorAll("button");
         for (const menuLink of menuLinks) {
           menuLink.classList.remove(isActiveClass);
         }
       } else {
         toggleMenu.classList.remove(isVisibleClass);
+        listWrapper2.classList.remove(isVisibleClass);
+        listWrapper3.classList.remove(isVisibleClass);
       }
     });
 
@@ -191,6 +194,7 @@ var navigationDesktop = {
     const openMenu = document.querySelectorAll(
       ".main__menu__item__holder__nested"
     );
+
     const mainMenuNav = document.querySelector(".mainmenu");
     const mainMenuNavLogo = document.querySelector(".bentley-logo");
     const closeMenu = document.querySelectorAll(".close__nav");
