@@ -606,7 +606,7 @@ li.holder_page a {
   right: 0;
   transition: opacity 0.3s ease-in-out;
   top: 1rem;
-  //width: 70%;
+  width: 70%;
   opacity: 0;
   z-index: -1;
   visibility: hidden;
@@ -866,4 +866,10 @@ li.holder_page a {
   width: 30px;
   height: 30px;
   position: relative;
+}
+
+.landing-img {
+  margin: 0 auto 0;
+  display: block;
+  width: 100%;
 }
