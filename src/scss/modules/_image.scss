@@ -50,3 +50,12 @@ img {
 .hidden {
   display: none;
 }
+
+.models-list-wrapper {
+  li {
+    display: none;
+    &:first-child {
+      display: block;
+    }
+  }
+}
